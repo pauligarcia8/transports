@@ -1,0 +1,9 @@
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-container h1 {
+    color: #102e4a;
+}

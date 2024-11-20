@@ -1,0 +1,28 @@
+.container {
+    width: 100%;
+}
+
+.home-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.columns {
+    display: flex;
+}
+
+.column {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.column h2 {
+    text-align: center;
+}
+
+.testimonio {
+    display: flex;
+    flex-direction: column;
+}
