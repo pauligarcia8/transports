@@ -1,11 +1,12 @@
 import React from "react";
+import '../styles/pages/ContactPage.css';
 
 const ContactPage = (props) => {
   return (
-    <main className="holder contacto">
+    <main className="holder contact">
       <div>
         <h2>Contacto Rápido</h2>
-        <form action="" method="" className="formulario">
+        <form action="" method="" className="form">
           <p>
             <label for="nombre">Nombre</label>
             <input type="text" name="" />
@@ -22,12 +23,12 @@ const ContactPage = (props) => {
             <label for="mensaje">Mensaje</label>
             <input type="text" name="" />
           </p>
-          <p className="acciones">
+          <p className="actions">
             <input type="submit" value="Enviar" />
           </p>
         </form>
       </div>
-      <div className="datos">
+      <div className="data">
         <h2>Otras vias de comunicación</h2>
         <p>
           También puede contactarse con nosotros usando uno de los siguientes
