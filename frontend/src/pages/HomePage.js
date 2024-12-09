@@ -31,9 +31,9 @@ const HomePage = (props) => {
         </div>
         <div className="column">
           <h2>Testimonios</h2>
-          <div className="testimonio">
-            <span className="cita">"Simplemente Excelente"</span>
-            <span className="autor">Juan Perez - zapatos.com</span>
+          <div className="testimony">
+            <span className="quote">"Simplemente Excelente"</span>
+            <span className="author">Juan Perez - zapatos.com</span>
           </div>
         </div>
       </div>

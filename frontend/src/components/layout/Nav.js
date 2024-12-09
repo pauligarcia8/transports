@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import '../../styles/components/layout/Nav.css';
 
 const Nav = (props) => {
@@ -7,16 +7,16 @@ const Nav = (props) => {
       <div>
         <ul className="items-container">
           <li>
-            <Link to="/">Home</Link>
+            <NavLink to="/" className={({ isActive }) => isActive ? "active" : undefined}>Home</NavLink>
           </li>
           <li>
-            <Link to="/us">Us</Link>
+            <NavLink to="/us" className={({ isActive }) => isActive ? "active" : undefined}>Us</NavLink>
           </li>
           <li>
-            <Link to="/news">News</Link>
+            <NavLink to="/news" className={({ isActive }) => isActive ? "active" : undefined}>News</NavLink>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <NavLink to="/contact" className={({ isActive }) => isActive ? "active" : undefined}>Contact</NavLink>
           </li>
         </ul>
       </div>
