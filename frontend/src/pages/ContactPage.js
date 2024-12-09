@@ -3,7 +3,7 @@ import '../styles/pages/ContactPage.css';
 
 const ContactPage = (props) => {
   return (
-    <main className="holder contact">
+    <main className="contact">
       <div>
         <h2>Contacto Rápido</h2>
         <form action="" method="" className="form">
@@ -21,7 +21,7 @@ const ContactPage = (props) => {
           </p>
           <p>
             <label for="mensaje">Mensaje</label>
-            <input type="text" name="" />
+            <textarea type="text" name=""></textarea>
           </p>
           <p className="actions">
             <input type="submit" value="Enviar" />

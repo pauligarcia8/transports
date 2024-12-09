@@ -1,9 +1,10 @@
 import React from "react";
+import '../styles/pages/UsPage.css';
 
 const UsPage = (props) => {
   return (
     <main className="holder">
-      <div className="historia">
+      <div className="history">
         <h2>Historia</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -26,8 +27,8 @@ const UsPage = (props) => {
       </div>
       <div className="staff">
         <h2>Staff</h2>
-        <div className="personas">
-          <div className="persona">
+        <div className="people">
+          <div className="person">
             <img src="images/nosotros/nosotros1.jpg" alt="Juan Gomez" />
             <h5>Juan Gomez</h5>
             <h6>Gerente General</h6>

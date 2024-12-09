@@ -1,0 +1,36 @@
+.history, .staff {
+    padding: 10px;
+}
+
+.people {
+    display: flex;
+    justify-content: space-between;
+}
+
+.person {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 18%;
+    text-align: center;
+    padding: 13px;
+    box-sizing: border-box;
+}
+
+.person img {
+    border-radius: 50%;
+    max-width: 60%;
+    box-shadow: 0 0 5px regba(0, 0, 0, 0.5);
+}
+
+.person h5 {
+    margin-top:  5px;
+}
+
+.person h6 {
+    font-style: italic;
+}
+
+.person p {
+     color: #666;
+     font-size: 12px;
+}

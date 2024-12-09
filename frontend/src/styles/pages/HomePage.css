@@ -22,7 +22,19 @@
     text-align: center;
 }
 
-.testimonio {
+.testimony {
     display: flex;
     flex-direction: column;
+}
+
+.testimony .quote {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 22px;
+    display: block;
+}
+
+.testimony .author {
+    font-size: 10px;
+    display: block;
 }

@@ -7,25 +7,46 @@
     padding: 10px;
 }
 
-.contact p {
+.form p {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
-.contact input {
-     width: 30rem;
+.form p label {
+    min-width: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.form p input,
+.form p textarea {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #999;
+    font-size: 14px;
+    padding: 6px 10px;
+}
+
+.form p:nth-child(4) {
+    align-items: start;
 }
 
 .actions {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
-.actions input {
-    width: 5rem;
-    padding: 0.5rem;
+.form input[type="submit"] {
+    background: #6da9ed;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    color: white;
+    padding: 6px 20px;
+    width: 50%;
     cursor: pointer;
+}
+
+.form input[type="submit"]:hover {
+    background-color: #4995ec;
 }
 
 .form p, .data p {
