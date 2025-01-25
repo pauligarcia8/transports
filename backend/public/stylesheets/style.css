@@ -28,6 +28,10 @@ code {
   min-height: 100vh; 
 }
 
+header {
+  background-color: #102e4a;
+}
+
 header, footer {
   padding: 10px;
   text-align: center;
@@ -41,7 +45,7 @@ header, footer {
 }
 
 .header-container h1 {
-  color: #102e4a;
+  color: white;
 }
 
 main, section {
