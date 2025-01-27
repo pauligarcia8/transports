@@ -1,5 +1,4 @@
 <div class="container mt-5">
-  <!-- User Welcome and Logout -->
   <div class="row mb-4">
     <div class="col text-end">
       <p class="mb-0">
@@ -31,21 +30,9 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Goes the title</td>
-            <td class="text-end">
-              <a href="#" class="btn btn-sm btn-secondary me-2">
-                <i class="fa fa-pencil"></i>
-              </a>
-              <a href="#" class="btn btn-sm btn-danger">
-                <i class="fa fa-trash"></i>
-              </a>
-            </td>
-          </tr>
           {{#each news}}
             <tr>
-                <th scope="row">{{@id}}</th>
+                <th scope="row">{{id}}</th>
                 <td>{{title}}</td>
                 <td class="text-end">
                     <a href="/admin/news/edit/{{id}}" class="btn btn-sm btn-secondary me-2">

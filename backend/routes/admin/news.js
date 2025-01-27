@@ -44,4 +44,40 @@ router.post("/add", async function (req, res, next) {
   }
 });
 
+router.get("/delete/:id", async function (req, res, next) {
+  var id = req.params.id;
+  await newsModel.deleteNewById(id);
+  res.redirect("/admin/news");
+});
+
+router.get("/edit/:id", async function (req, res, next) {
+  var id = req.params.id;
+  var news = await newsModel.getNewById(id);
+  
+  res.render("admin/edit", {
+    layout: "admin/layout",
+    news,
+  });
+});
+
+router.post("/edit", async function (req, res, next) {
+  try {
+    const obj = {
+      title: req.body.title,
+      subtitle: req.body.subtitle,
+      body: req.body.body,
+    };
+
+    await newsModel.editNewById(obj, req.body.id);
+    res.redirect("/admin/news");
+    
+  } catch (error) {
+    res.render("admin/edit", {
+      layout: "admin/layout",
+      error: true,
+      message: "An error has occurred while editing the news",
+    });
+  }
+});
+
 module.exports = router;

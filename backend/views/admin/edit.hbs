@@ -1,0 +1,40 @@
+<div class="container" style="margin:100px auto">
+  <div class="row">
+    <div class="col-6 offset-3">
+      <h4>Edit the current new</h4>
+      <form action="/admin/news/edit" method="post">
+        <input type="hidden" name="id" value="{{news.id}}" />
+        <div class="form-group">
+          <input
+            type="text"
+            name="title"
+            class="form-control"
+            placeholder="Title"
+            value="{{news.title}}"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            name="subtitle"
+            class="form-control"
+            placeholder="Subtitle"
+            value="{{news.subtitle}}"
+          />
+        </div>
+        <div class="form-group">
+          <textarea
+            type="text"
+            name="body"
+            class="form-control"
+            placeholder="Body"
+          >{{news.body}}</textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Edit</button>
+      </form>
+      {{#if error}}
+        <p>{{message}}</p>
+      {{/if}}
+    </div>
+  </div>
+</div>
