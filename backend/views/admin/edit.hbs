@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-6 offset-3">
       <h4>Edit the current new</h4>
-      <form action="/admin/news/edit" method="post">
+      <form action="/admin/news/edit" method="post" enctype="multipart/form-data">
         <input type="hidden" name="id" value="{{news.id}}" />
         <div class="form-group">
           <input
@@ -21,6 +21,20 @@
             placeholder="Subtitle"
             value="{{news.subtitle}}"
           />
+        </div>
+        <div class="form-group">
+          <p>
+            <input
+              type="file"
+              name="image"
+              class="form-control"
+              id="image"
+            />
+          </p>
+          <p>
+            <input type="checkbox" name="img_delete" id="img_delete" value="1">Delete current image?</input>
+            <input type="hidden" name="img_original" value="{{news.id_img}}" />
+          </p>
         </div>
         <div class="form-group">
           <textarea
