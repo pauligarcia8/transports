@@ -17,4 +17,27 @@ async function insertNews(obj) {
   }
 }
 
-module.exports = { getNews, insertNews };
+async function deleteNewById(id) {
+  var query = 'DELETE FROM news WHERE id = ?';
+  var rows = await pool.query(query, [id]);
+  return rows;
+}
+
+async function getNewById(id) {
+  var query = "SELECT * FROM news WHERE id = ? ";
+  var rows = await pool.query(query, [id]);
+  return rows[0];
+}
+
+async function editNewById(obj, id) {
+  try {
+    var query = 'UPDATE news SET ? WHERE id = ?';
+    var rows = await pool.query(query, [obj, id]);
+    return rows;
+  } catch (error) {
+    console.log(error);
+    throw error;
+  }
+}
+
+module.exports = { getNews, insertNews, deleteNewById, getNewById, editNewById };
