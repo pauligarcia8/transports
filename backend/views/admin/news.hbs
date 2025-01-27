@@ -26,6 +26,7 @@
           <tr>
             <th scope="col" style="width: 5%;">#</th>
             <th scope="col" style="width: 75%;">Title</th>
+            <th scope="col" style="width: 75%;">Image</th>
             <th scope="col" class="text-end" style="width: 20%;">Actions</th>
           </tr>
         </thead>
@@ -34,7 +35,8 @@
             <tr>
                 <th scope="row">{{id}}</th>
                 <td>{{title}}</td>
-                <td class="text-end">
+                <td class="text-center">{{{image}}}</td>
+                <td>
                     <a href="/admin/news/edit/{{id}}" class="btn btn-sm btn-secondary me-2">
                     <i class="fa fa-pencil"></i>
                     </a>
