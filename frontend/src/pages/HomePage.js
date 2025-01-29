@@ -9,7 +9,7 @@ const HomePage = (props) => {
       </div>
       <div className="columns">
         <div className="column">
-          <h2>Bienvenidos</h2>
+          <h2>Welcome</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -30,7 +30,7 @@ const HomePage = (props) => {
           </p>
         </div>
         <div className="column">
-          <h2>Testimonios</h2>
+          <h2>Testimony</h2>
           <div className="testimony">
             <span className="quote">"Simplemente Excelente"</span>
             <span className="author">Juan Perez - zapatos.com</span>

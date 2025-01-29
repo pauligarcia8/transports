@@ -1,11 +1,12 @@
 import React from "react";
-import '../styles/pages/UsPage.css';
+import "../styles/pages/UsPage.css";
+import { employees } from "../utils";
 
 const UsPage = (props) => {
   return (
     <main className="holder">
       <div className="history">
-        <h2>Historia</h2>
+        <h2>Our History</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -28,20 +29,14 @@ const UsPage = (props) => {
       <div className="staff">
         <h2>Staff</h2>
         <div className="people">
-          <div className="person">
-            <img src="images/nosotros/nosotros1.jpg" alt="Juan Gomez" />
-            <h5>Juan Gomez</h5>
-            <h6>Gerente General</h6>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-          </div>
+          {employees.map((employee, index) => (
+            <div className="person" key={index}>
+              <img src={employee.image} alt={employee.name} />
+              <h5>{employee.name}</h5>
+              <h6>{employee.position}</h6>
+              <p>{employee.description}</p>
+            </div>
+          ))}
         </div>
       </div>
     </main>
