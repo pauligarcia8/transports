@@ -1,8 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/pages/UsPage.css";
-import { employees } from "../utils";
 
 const UsPage = (props) => {
+  const [loading, setLoading] = useState(false);
+  const [employees, setEmployees] = useState([]);
+
+  useEffect(() => {
+    const loadEmployees = async () => {
+      setLoading(true);
+      const response = await fetch("http://localhost:3000/api/employees");
+      const data = await response.json();
+      setEmployees(data);
+      setLoading(false);
+    };
+    loadEmployees();
+  }, []);
+
   return (
     <main className="holder">
       <div className="history">
@@ -29,14 +42,18 @@ const UsPage = (props) => {
       <div className="staff">
         <h2>Staff</h2>
         <div className="people">
-          {employees.map((employee, index) => (
-            <div className="person" key={index}>
-              <img src={employee.image} alt={employee.name} />
-              <h5>{employee.name}</h5>
-              <h6>{employee.position}</h6>
-              <p>{employee.description}</p>
-            </div>
-          ))}
+          {loading ? (
+            <p>Loading...</p>
+          ) : (
+            employees.map((employee, index) => (
+              <div className="person" key={index}>
+                <img src={employee.image} alt={employee.name} />
+                <h5>{employee.name}</h5>
+                <h6>{employee.position}</h6>
+                <p>{employee.description}</p>
+              </div>
+            ))
+          )}
         </div>
       </div>
     </main>
