@@ -1,6 +1,7 @@
 var express = require("express");
 var router = express.Router();
 var newsModel = require("../models/newsModel");
+var employeesModel = require("../models/employeesModel");
 var cloudinary = require("cloudinary").v2;
 var nodemailer = require("nodemailer");
 
@@ -26,6 +27,32 @@ router.get("/news", async function (req, res, next) {
     }
   });
   res.json(news);
+});
+
+router.get("/employees", async function (req, res, next) {
+  try {
+    let employees = await employeesModel.getEmployees();
+
+    employees = employees.map((employee) => {
+      let image = "";
+      if (employee.img_id) {
+        image = cloudinary.url(employee.img_id, {
+          width: 1800,
+          height: 1650,
+          crop: "fill",
+        });
+      }
+      return {
+        ...employee, 
+        image,
+      };
+    });
+
+    res.json(employees);
+  } catch (error) {
+    console.error("Error fetching employees:", error);
+    res.status(500).json({ message: "Error fetching employees" });
+  }
 });
 
 router.post("/contact", async (req, res) => {
