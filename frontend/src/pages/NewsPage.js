@@ -8,7 +8,7 @@ const NewsPage = (props) => {
   useEffect(() => {
     const loadNews = async () => {
       setLoading(true);
-      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/news`);
+      const response = await fetch("http://localhost:3000/api/news");
       const data = await response.json();
       setNews(data);
       setLoading(false);
